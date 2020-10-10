@@ -1,0 +1,16 @@
+  <div class="title">簡単アンケート</div>
+  <div class="post" ><%= link_to 'アンケートを作る', "#", class: "make-up" %></div>
+  <div class="mess">
+	  <div class="message">難しいことは必要なし！<br />さぁ作って、答えましょう！</div>
+  </div>
+
+  <div class="contents row">
+    <% @anks.each do |ank| %>
+      <div class="content_post" style="background-image: url(<%= ank.image %>);">
+        <p><%= ank.text %></p>
+        <span class="name">
+          <%= ank.name %>
+        </span>
+      </div>
+    <% end %>
+  </div>

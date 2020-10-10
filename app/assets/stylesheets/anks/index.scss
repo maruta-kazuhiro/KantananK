@@ -1,0 +1,105 @@
+a {
+  text-decoration: none;
+}
+
+.cover{
+  background-image: image-url('2001.jpg');
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
+
+.mat{
+  background-color: #faf0e6;
+  opacity:  0.85;
+  height: 100vh;
+}
+
+.maintitle {
+  font-size: xx-large;
+  padding: 10px;
+  height: 40px;
+  width: 100vw;
+  color: blanchedalmond;
+  display:block;
+}
+
+h1{
+  font-family: 'Vidaloka', serif;
+  text-align: left;
+  font-weight: normal;
+  color: #444;
+  }
+
+.description{
+  display: block;
+  font-size: xx-small;
+  color: #444;
+  display:block;
+  }
+
+.user_nav {
+  margin: 20px;
+}
+
+.lists-right {
+  list-style: none;
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 30px;
+}
+
+.lists{
+  margin: 0 20px 0 20px;
+}
+
+.login {
+  margin: 0 10px 0 10px;
+}
+
+
+.post{
+  list-style: none;
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 40px;
+}
+
+
+.header-button a {
+  text-decoration: none;
+  border: 1px solid darkred;
+  color: darkred;
+  padding: 20px;
+}
+
+.title {
+  font-weight: normal;
+  padding-bottom: 10px;
+  text-align: center;
+  position: relative;
+  margin: 0 0 10px 0;
+  letter-spacing: 5px;
+  font-size: xx-large;
+}
+
+.mess {
+  display: flex;
+  justify-content: center;
+}
+
+.message {
+  width: 50%;
+  line-height: 2;
+  background-color:#191970;
+  padding: 20px;
+  position: center;
+  z-index: 999;
+  color: #ffffff;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+}

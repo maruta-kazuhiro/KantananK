@@ -1,0 +1,2 @@
+class Ank < ApplicationRecord
+end

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kantanank</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="cover">
+      <div class="mat">
+        <header class="header">
+          <h1><span class="maintitle"><a href="/">Kantan Ankeeto</a><span class="description">簡単にアンケートを作って、答えるためのサイト！</span></h1></span></h1>
+            <div class="user_nav">
+              <% if user_signed_in? %>
+                <div class='lists-right'>
+                  <div class='lists'><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></div> 
+                  <div class='lists'><%= link_to current_user.nickname, edit_user_registration_path, class: "user-nickname" %></div> 
+                </div>
+              <% else %>
+                <div class='lists-right'>
+                  <div class= 'login'><%= link_to 'ログイン', new_user_session_path, class: "login" %></div>
+                  <div class= 'login'><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></div>
+              </div>
+              <% end %>
+            </div>
+        </header>
+    <%= yield %>
+      <footer>
+        <p>Copyright KnatanAnkeeto 2020.</p>
+      </footer>
+      </div>
+    </div>
+  </body>
+</html>
