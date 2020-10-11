@@ -103,3 +103,24 @@ h1{
 footer {
   text-align: center;
 }
+
+.btnback {
+  font-size: large;
+}
+
+.contenstsone{
+  display: flex;
+  justify-content: center;
+}
+
+.contentsrow{
+  width: 50%;
+  line-height: 2;
+  background-color:#191970;
+  padding: 20px;
+  position: center;
+  z-index: 999;
+  color: #ffffff;
+  letter-spacing: 2px;
+  margin: 20px;
+}

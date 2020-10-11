@@ -1,0 +1,16 @@
+<div class="contents row">
+  <div class="container">
+    <div class="title">アンケートを作り直す！</div>
+
+  <div class="mainbox">
+    <%= form_with(model: @ank, local: true) do |form| %>
+      <%= form.text_field :question, class:"input-default", id:"anke-q", placeholder: "例）好きな色はなんですか？" %><br />
+      <%= form.text_field :answer1, class:"input-default", id:"anke-a1", placeholder: "例）赤" %><br />
+      <%= form.text_field :answer2, class:"input-default", id:"anke-a2", placeholder: "例）青" %><br />
+      <%= form.text_field :answer3, class:"input-default", id:"anke-a3", placeholder: "例）緑" %><br />
+      <%= form.submit "編集完了！" %>
+     <% end %>
+  </div>
+
+  </div>
+</div>

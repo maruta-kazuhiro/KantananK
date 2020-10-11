@@ -1,0 +1,22 @@
+<div class="contents row">
+  <div class="container">
+  <div class="title">アンケートを作ってみましょう！</div>
+
+  <div class="mainbox">
+    <%= form_with model:@ank, local: true do |form| %>
+        <div class="weight-bold-text">クリックで画像を付けられます</div>
+        <%= form.file_field :image, id:"item-image" %>
+        <div class="weight-bold-text">質問</div>
+        <%= form.text_field :question, class:"input-default", id:"anke-q", placeholder: "例）好きな色はなんですか？" %><br />
+        <div class="weight-bold-text">回答１</div>
+        <%= form.text_field :answer1, class:"input-default", id:"anke-a1", placeholder: "例）赤" %><br />
+        <div class="weight-bold-text">回答２</div>
+        <%= form.text_field :answer2, class:"input-default", id:"anke-a2", placeholder: "例）青" %><br />
+        <div class="weight-bold-text">回答３</div>
+        <%= form.text_field :answer3, class:"input-default", id:"anke-a3", placeholder: "例）緑" %><br />
+        <%= form.submit "質問する！" %>
+    <% end %>
+  </div>
+
+  </div>
+</div>
