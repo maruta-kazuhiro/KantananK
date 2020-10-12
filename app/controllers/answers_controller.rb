@@ -5,7 +5,10 @@ class AnswersController < ApplicationController
   end
   
   def new
-    @answer = Answer.new
+    @ank = Ank.find(params[:ank_id])
+    @answer2_1 = Answer.where(ank_id: @ank.id ).sum(:answer2_1)
+    @answer2_2 = Answer.where(ank_id: @ank.id ).sum(:answer2_2)
+    @answer2_3 = Answer.where(ank_id: @ank.id ).sum(:answer2_3)
   end
 
   def create
