@@ -10,6 +10,8 @@
     <% @anks.each do |ank| %>
       <div class="content_post" style="background-image: url(<%= ank.image %>);">
         <p>Q.<%= ank.question%>
+          <%= link_to '回答', ank_answers_path(ank.id) %>
+          <%= link_to '結果' %>
           <%= link_to '編集', edit_ank_path(ank.id), method: :get %>
           <%= link_to '削除', ank_path(ank.id), method: :delete %>
        </p>      

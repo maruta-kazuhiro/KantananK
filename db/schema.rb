@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_10_141323) do
+ActiveRecord::Schema.define(version: 2020_10_11_105514) do
 
   create_table "anks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "image"
@@ -20,6 +20,18 @@ ActiveRecord::Schema.define(version: 2020_10_10_141323) do
     t.string "answer3", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "answers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "answer2_1"
+    t.string "answer2_2"
+    t.string "answer2_3"
+    t.bigint "user_id", null: false
+    t.bigint "ank_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["ank_id"], name: "index_answers_on_ank_id"
+    t.index ["user_id"], name: "index_answers_on_user_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -35,4 +47,6 @@ ActiveRecord::Schema.define(version: 2020_10_10_141323) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "answers", "anks"
+  add_foreign_key "answers", "users"
 end
