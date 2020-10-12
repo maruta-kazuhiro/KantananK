@@ -10,12 +10,26 @@
     <% @anks.each do |ank| %>
       <div class="content_post" style="background-image: url(<%= ank.image %>);">
         <p>Q.<%= ank.question %>
-          <%= link_to '回答', ank_answers_path(ank.id) %>
-          <%= link_to '結果', new_ank_answer_path(ank.id) %>
-          <%= link_to '編集', edit_ank_path(ank.id), method: :get %>
-          <%= link_to '削除', ank_path(ank.id), method: :delete %>
-       </p>      
+          <div class="list_nav">
+            <% if user_signed_in? %>
+            <div class="lists_haba">
+              <%= link_to '削除', ank_path(ank.id), method: :delete %>
+                    </div>
+                                <div class="lists_haba">
+              <%= link_to '編集', edit_ank_path(ank.id), method: :get %>
+                                  </div>
+            <% end %>
+                        <div class="lists_haba">
+            <%= link_to '結果をみる！', new_ank_answer_path(ank.id) %>
+                                </div>
+            <% if user_signed_in? %>
+                        <div class="lists_haba">
+              <%= link_to '回答する！', ank_answers_path(ank.id) %>
+                                  </div>
+            <% end %>
+        </p>      
       </div>
+    </div>
     <% end %>
   </div>
 </div>

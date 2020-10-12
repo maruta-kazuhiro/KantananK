@@ -1,5 +1,7 @@
 class AnswersController < ApplicationController
+  before_action :move_to_index, except: [:show, :new]
 
+  
   def index
     @ank = Ank.find(params[:ank_id])
   end
@@ -25,6 +27,12 @@ class AnswersController < ApplicationController
 
   def answers_params
     params.permit(:token, :question_id, :answer2_1, :answer2_2, :answer2_3, :ank_id).merge(user_id: current_user.id)
+  end
+
+  def move_to_index
+    unless user_signed_in?
+      redirect_to root_path
+    end
   end
 
 end
