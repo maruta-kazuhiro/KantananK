@@ -1,9 +1,10 @@
-  <div class="title">簡単アンケート</div>
-  <div class="post" ><%= link_to 'アンケートを作る', new_ank_path, class: "make-up" %></div>
 
-  <div class="mess">
-	  <div class="message">難しいことは必要なし！<br />さぁ作って、答えましょう！</div>
-  </div>
+
+<% if user_signed_in? %>
+  <div class="post" ><%= link_to 'アンケートを作る！', new_ank_path, class: "make-up" %></div>
+<% else %>
+  <div class="post" ><%= link_to 'まずは新規登録から！', new_user_registration_path, class: "make-up" %></div>
+<% end %>
 
 <div class="contenstsone">
   <div class="contentsrow">
@@ -14,18 +15,18 @@
             <% if user_signed_in? %>
             <div class="lists_haba">
               <%= link_to '削除', ank_path(ank.id), method: :delete %>
-                    </div>
-                                <div class="lists_haba">
+            </div>
+            <div class="lists_haba">
               <%= link_to '編集', edit_ank_path(ank.id), method: :get %>
-                                  </div>
+            </div>
             <% end %>
-                        <div class="lists_haba">
-            <%= link_to '結果をみる！', new_ank_answer_path(ank.id) %>
-                                </div>
+            <div class="lists_haba">
+              <%= link_to '結果をみる！', new_ank_answer_path(ank.id) %>
+            </div>
             <% if user_signed_in? %>
-                        <div class="lists_haba">
+            <div class="lists_haba">
               <%= link_to '回答する！', ank_answers_path(ank.id) %>
-                                  </div>
+            </div>
             <% end %>
         </p>      
       </div>
