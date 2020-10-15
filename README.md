@@ -55,6 +55,7 @@ test1@test(E-mail), aaaa12(Password)<br />
 
 ## 実装した機能について<br />
 実装した機能について、それぞれどのような特徴があるのか列挙しましょう。GIFを添えることで、イメージがしやすくなります。<br />
+![kaitou](https://user-images.githubusercontent.com/70316338/96123282-91dc2200-0f2d-11eb-82fb-463d935a7b0e.gif)
 
 ## データベース設計<br />
 ### users テーブル
