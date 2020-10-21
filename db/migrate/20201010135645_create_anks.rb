@@ -6,6 +6,7 @@ class CreateAnks < ActiveRecord::Migration[6.0]
       t.string      :answer1,      null:false
       t.string      :answer2,      null:false
       t.string      :answer3,      null:false
+      t.references  :user,         null:false, foreign_key:true
       t.timestamps
     end
   end
