@@ -11,20 +11,25 @@ class AnksController < ApplicationController
   end
 
   def create
-    Ank.create!(ank_params)
+    @ank = Ank.new(ank_params)
+    if @ank.save
+      redirect_to root_path
+    else
+      render :new
+    end
   end
 
   def destroy
-    ank = Ank.find(params[:id])
-    ank.destroy
+    @ank = Ank.find(params[:id])
+    @ank.destroy
   end
 
   def edit
   end
 
   def update
-    ank = Ank.find(params[:id])
-    ank.update(ank_params)
+    @ank = Ank.find(params[:id])
+    @ank.update(ank_params)
   end
 
   def show

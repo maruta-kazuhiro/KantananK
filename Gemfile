@@ -35,7 +35,6 @@ group :development, :test do
 end
 
 group :development do
-  gem 'better_errors'
   gem 'binding_of_caller'
   gem 'awesome_print'
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
@@ -60,6 +59,7 @@ gem 'devise'
 gem 'kaminari'
 gem 'pry-rails'
 gem 'font-awesome-rails'
+gem 'mini_magick'
 
 group :production do
   gem 'rails_12factor'

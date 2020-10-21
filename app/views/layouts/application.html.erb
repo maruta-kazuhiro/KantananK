@@ -18,8 +18,8 @@
             <div class="user_nav">
               <% if user_signed_in? %>
                 <div class='lists-right'>
-                  <div class='lists'><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></div> 
-                  <div class='lists'><%= link_to current_user.nickname, edit_user_registration_path, class: "user-nickname" %></div> 
+                  <div class='loginup'><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></div> 
+                  <div class='loginup'><%= link_to current_user.nickname, edit_user_registration_path, class: "user-nickname" %></div> 
                 </div>
               <% else %>
                 <div class='lists-right'>

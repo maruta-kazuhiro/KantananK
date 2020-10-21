@@ -1,25 +1,24 @@
 <div class="contents row">
   <div class="container">
-  <div class="title">アンケートに回答してみましょう！</div>
 
 <div class="anserplease">
-  <%= @ank.question %><br />
-
+  <%= image_tag @ank.image.variant(resize: '100x100') if @ank.image.present? %><br />
+  <%= @ank.question %><br /><br />
 
 <%= form_with(model: @answer, local: true) do |form| %>
   <label>
     <%= @ank.answer1 %>
-    <%= form.radio_button :answer2_1, 1 %><br />
+    <%= form.radio_button :answer2_1, 1 %><br /><br />
   </label>
 
   <label>
     <%= @ank.answer2 %>
-    <%= form.radio_button :answer2_2, 1 %><br />
+    <%= form.radio_button :answer2_2, 1 %><br /><br />
   </label>
 
   <label>
     <%= @ank.answer3 %>
-    <%= form.radio_button :answer2_3, 1 %><br />
+    <%= form.radio_button :answer2_3, 1 %><br /><br />
   </label>
 
 <input type="button" value="チェックを外す" onclick="window.location.reload();" />
