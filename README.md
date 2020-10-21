@@ -57,11 +57,11 @@ test1@test(E-mail), aaaa12(Password)<br />
 ### ・アンケート作成機能について<br />
 質問事項と回答を３つ用意するだけ！<br />
 簡単にアンケートを作成できます。<br />
-![sakusei](https://user-images.githubusercontent.com/70316338/96123595-031bd500-0f2e-11eb-9363-59a7c69ec5d1.gif)
+![82c5871dfd79ed2d1bead90d5e430a99](https://user-images.githubusercontent.com/70316338/96724168-7f109400-13ea-11eb-8d0b-e5a49943f89e.gif)
 ### ・アンケート回答機能について<br />
 質問に対して、チェックをつけて回答するだけ！<br />
 回答を送信すると、自動的に集計されます。<br />
-![kaitou](https://user-images.githubusercontent.com/70316338/96123282-91dc2200-0f2d-11eb-82fb-463d935a7b0e.gif)
+![687d1a7205984e5330561b4b9ed3844e](https://user-images.githubusercontent.com/70316338/96724252-9780ae80-13ea-11eb-8433-41b0cccd0df2.gif)
 
 
 ## データベース設計<br />
