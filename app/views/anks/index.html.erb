@@ -14,9 +14,6 @@
           <div class="list_nav">
             <% if user_signed_in? %>
             <div class="lists_haba">
-              <%= link_to '削除', ank_path(ank.id), method: :delete %>
-            </div>
-            <div class="lists_haba">
               <%= link_to '編集', edit_ank_path(ank.id), method: :get %>
             </div>
             <% end %>
