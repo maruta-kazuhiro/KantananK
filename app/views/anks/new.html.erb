@@ -5,6 +5,7 @@
   <div class="mainbox">
     <%= form_with model:@ank, local: true do |form| %>
     <%= render 'shared/error_messages', model: form.object %>
+        <div id="image-item-list"></div>
         <div class="weight-bold-text">クリックで画像を付けられます</div>
         <%= form.file_field :image, id:"item-image" %>
         <div class="weight-bold-text">質問</div>
